@@ -1,0 +1,19 @@
+<h2>Edit a Movie</h2>
+<form action="{{routePost}}" method="post">
+	<p>{{> formTextField definedValue=movie.title value='title' name='Title' }}</p>
+	<p>{{> formTextField definedValue=movie.genre value='genre' name='Genre' }}</p>
+	<p>{{> formTextField definedValue=movie.plot value='plot' name='Plot' }}</p>
+
+	<label for="cast">Cast</label>
+	<select name="cast" id="cast" multiple>
+		{{#each celebrities}}
+			<option {{#if this.isSelected}} selected {{/if}} value="{{this.data._id}}">
+			 	{{this.data.name}}
+			 </option>
+		{{/each}}
+	</select>
+
+  <p>
+	<input type='submit' placeholder="0" value='Edit movie' />
+	</p>
+</form>

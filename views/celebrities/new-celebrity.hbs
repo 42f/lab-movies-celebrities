@@ -1,0 +1,10 @@
+<h2>Create a new Celebrity</h2>
+<form action="{{routePost}}" method="post">
+	<p>{{> formTextField value='name' name='Name' required=true }}</p>
+	<p>{{> formTextField value='occupation' name='Occupation' }}</p>
+	<p>{{> formTextField value='catchPhrase' name='Catch phrase' required=true }}</p>
+
+  <p>
+	<input type='submit' placeholder="0" value='Create a Celebrity' />
+	</p>
+</form>

@@ -1,0 +1,15 @@
+<h1>Celebrities</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Occupation</th>
+    <th>Catch Phrase</th>
+  </tr>
+  {{#each celebrities}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>{{this.occupation}}</td>
+      <td>{{this.catchPhrase}}</td>
+    </tr>
+  {{/each}}
+</table>

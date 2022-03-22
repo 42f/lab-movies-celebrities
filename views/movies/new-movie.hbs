@@ -1,0 +1,17 @@
+<h2>Create a new Movie</h2>
+<form action="{{routePost}}" method="post">
+	<p>{{> formTextField value='title' name='Title' }}</p>
+	<p>{{> formTextField value='genre' name='Genre' }}</p>
+	<p>{{> formTextField value='plot' name='Plot' }}</p>
+
+	<label for="cast">Cast</label>
+	<select name="cast" id="cast" multiple>
+		{{#each celebrities}}
+			<option value="{{this._id}}">{{this.name}}</option>
+		{{/each}}
+	</select>
+
+  <p>
+	<input type='submit' placeholder="0" value='Create a Movie' />
+	</p>
+</form>
